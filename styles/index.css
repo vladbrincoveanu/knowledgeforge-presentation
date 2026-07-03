@@ -1,0 +1,309 @@
+/* ─── KnowledgeForge Pitch — Matched to live landing page (localhost:8080) ────
+   Source: computed styles extracted from live app via Playwright
+   Background:  #0E121B (rgb 14,18,27)   — near-black base
+   Accent:      #F6AE31 (rgb 246,174,49)  — amber/gold (node color, highlights)
+   Accent dark: #DB7706 (rgb 219,119,6)   — darker amber (kicker, muted accent)
+   Text:        #F1EDE4 (rgb 241,237,228)  — warm off-white
+   Text muted:  #8A8680                    — warm gray
+   Card bg:     rgba(14,18,27,0.72)        — frosted dark glass
+   Font:        Bricolage Grotesque 800 display · Inter body · Geist Mono
+   ─────────────────────────────────────────────────────────────────────────── */
+
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&display=swap");
+
+/* ── 1. TOKEN OVERRIDE — remap boardroom to live landing-page palette ──────── */
+:root[data-variant='boardroom'] {
+  /* Backgrounds */
+  --ink:   #0E121B;                    /* exact landing bg rgb(14,18,27) */
+  --ink-2: #121720;                    /* frosted card base */
+  --line:  rgba(255, 255, 255, 0.07);  /* subtle border */
+
+  /* Text */
+  --fg:     #F1EDE4;                   /* warm off-white rgb(241,237,228) */
+  --fg-dim: #8A8680;                   /* warm muted */
+
+  /* Accent: amber/gold (node color = primary landing accent) */
+  --accent-base: #F6AE31;
+  --accent-l-lo: 0.72;
+  --accent-l-hi: 0.84;
+  --accent-c-hi: 0.20;
+  --on-accent:   #0E121B;
+
+  /* Status */
+  --good: #F6AE31;                     /* amber (landing "good" = gold) */
+  --warn: #DB7706;                     /* darker amber for caution */
+  --bad:  #ff6b6b;
+  --info: #A3B3C2;                     /* steel blue-gray (secondary nodes) */
+
+  /* Typography: Bricolage Grotesque for display, Inter for body */
+  --font-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --font-body:    'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono:    'Geist Mono', 'JetBrains Mono', ui-monospace, monospace;
+  --w-display:    800;
+  --tr-display:   -0.02em;
+  --w-strong:     700;
+
+  /* Geometry */
+  --radius:    10px;
+  --radius-sm: 6px;
+
+  /* Surfaces: dark frosted glass, matching rgba(14,18,27,0.72) from live page */
+  --surface-bg:     rgba(14, 18, 27, 0.72);
+  --surface-border: 1px solid rgba(255, 255, 255, 0.07);
+  --surface-shadow: 0 4px 24px rgba(0, 0, 0, 0.5),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  /* Glow: warm amber orb (matches graph nodes on landing page) */
+  --glow: radial-gradient(
+    45% 55% at 82% 12%,
+    rgba(246, 174, 49, 0.14) 0%,
+    transparent 65%
+  );
+}
+
+/* ── 2. SLIDE BACKGROUNDS — warm amber-tinted dark, matching landing page ──── */
+
+/* All slides: near-black with subtle warm amber glow bottom-right */
+.slidev-layout {
+  background:
+    radial-gradient(
+      ellipse 60% 50% at 88% 90%,
+      rgba(219, 119, 6, 0.08) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 40% 35% at 12% 10%,
+      rgba(246, 174, 49, 0.05) 0%,
+      transparent 55%
+    ),
+    #0E121B;
+}
+
+/* Cover + End: stronger warm amber atmosphere matching the hero graph glow */
+.slidev-layout.cover,
+.slidev-layout.end {
+  background:
+    radial-gradient(
+      ellipse 70% 60% at 80% 45%,
+      rgba(219, 119, 6, 0.18) 0%,
+      transparent 58%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 15% 65%,
+      rgba(246, 174, 49, 0.08) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 45% 35% at 50% 10%,
+      rgba(8, 24, 33, 0.72) 0%,
+      transparent 60%
+    ),
+    #0E121B;
+}
+
+/* ── 3. KICKER — small amber uppercase text, matching landing page eyebrow ──── */
+.kicker::before,
+.kicker::after {
+  content: none !important;
+  display: none !important;
+}
+.accent-bar,
+.card::before,
+.panel::before {
+  display: none !important;
+}
+
+.kicker {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.4rem !important;
+  padding: 0 !important;                         /* no pill — plain text like landing */
+  border-radius: 0 !important;
+  background: none !important;
+  border: none !important;
+  color: #DB7706 !important;                     /* darker amber, matches kicker on landing */
+  font-size: 0.68rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  width: fit-content !important;
+  line-height: 1 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* ── 4. HEADING STYLE — warm off-white, matching landing page h1 ────────────── */
+.slidev-layout h1,
+.slidev-layout h2 {
+  color: #F1EDE4;
+  font-family: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  font-weight: 800;
+}
+
+/* Accent spans in headings: amber gold, matching "Your code already did." on landing */
+.slidev-layout h1 .accent2,
+.slidev-layout h2 .accent2,
+.slidev-layout h1 [class*="accent"],
+.slidev-layout h2 [class*="accent"],
+.slidev-layout h1 span,
+.slidev-layout h2 span {
+  color: #F6AE31 !important;
+  -webkit-text-fill-color: #F6AE31 !important;
+  background: none !important;
+  background-clip: unset !important;
+}
+
+/* ── 5. SURFACE CARDS — dark frosted glass with amber top-border ────────────── */
+.feature-cell,
+.panel,
+.stat,
+.step,
+.col {
+  background: rgba(14, 18, 27, 0.72) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  border-top: 1px solid rgba(246, 174, 49, 0.22) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04) !important;
+  border-radius: 10px !important;
+}
+
+/* Bad stats: no amber top, muted only */
+.stat[data-tone="bad"],
+.stat.bad {
+  border-top: 1px solid rgba(255, 107, 107, 0.22) !important;
+}
+
+/* Good stats: stronger amber */
+.stat[data-tone="good"],
+.stat.good {
+  border-top: 1px solid rgba(246, 174, 49, 0.40) !important;
+}
+
+/* ── 6. DIAGRAM HERO IMAGE (slide 4) ────────────────────────────────────────── */
+.diagram-stage {
+  flex-direction: column;
+  gap: var(--sp-4);
+  min-height: 0;
+}
+.diagram-stage .tahta-figure {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  gap: var(--sp-3);
+}
+.diagram-stage .tahta-figure img {
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  border: none;
+  border-radius: 0;
+  filter: drop-shadow(0 16px 38px rgba(0, 0, 0, 0.6));
+}
+.diagram-stage .tahta-figure figcaption {
+  flex: 0 0 auto;
+  justify-content: center;
+  text-align: center;
+  max-width: 74ch;
+  margin: 0 auto;
+}
+
+/* ── 7. PROOF-STRIP CHIPS — amber-outlined, matching node label style on landing */
+.proof-strip {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 0.6rem;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.proof-strip span {
+  font: 500 0.78rem/1.5 'Geist Mono', ui-monospace, monospace;
+  color: #8A8680;
+  padding: 0.28rem 0.75rem;
+  border: 1px solid rgba(246, 174, 49, 0.18);
+  border-radius: 4px;
+  background: rgba(14, 18, 27, 0.72);
+  letter-spacing: 0.05em;
+}
+.proof-strip b {
+  color: #F6AE31;
+  font-weight: 600;
+}
+
+/* ── 8. VS LAYOUT — left bad / right good color cue ─────────────────────────── */
+.vs-left {
+  border-left: 2px solid rgba(255, 107, 107, 0.30) !important;
+}
+.vs-right {
+  border-left: 2px solid rgba(246, 174, 49, 0.35) !important;
+}
+
+/* ── 9. STEPS — amber left accent ───────────────────────────────────────────── */
+.step {
+  border-left: 2px solid rgba(246, 174, 49, 0.25) !important;
+}
+.step-number {
+  color: #F6AE31 !important;
+}
+
+/* ── 10. COORDINATED ENTRANCE MOTION ────────────────────────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  .feature .feature-cell,
+  .panels .panel,
+  .stat-grid .stat,
+  .cols .col {
+    animation: tahta-reveal var(--motion-dur) var(--motion-ease) both;
+  }
+  .feature .feature-cell:nth-child(1),
+  .panels .panel:nth-child(1),
+  .stat-grid .stat:nth-child(1),
+  .cols .col:nth-child(1) { animation-delay: 140ms; }
+  .feature .feature-cell:nth-child(2),
+  .panels .panel:nth-child(2),
+  .stat-grid .stat:nth-child(2),
+  .cols .col:nth-child(2) { animation-delay: 220ms; }
+  .feature .feature-cell:nth-child(3),
+  .panels .panel:nth-child(3),
+  .stat-grid .stat:nth-child(3) { animation-delay: 300ms; }
+  .feature .feature-cell:nth-child(4),
+  .panels .panel:nth-child(4),
+  .stat-grid .stat:nth-child(4) { animation-delay: 380ms; }
+
+  .l-body .steps,
+  .l-body .vs,
+  .diagram-stage .proof-strip {
+    animation: tahta-reveal var(--motion-dur) var(--motion-ease) both;
+    animation-delay: 150ms;
+  }
+  .diagram-stage .tahta-figure {
+    animation: tahta-reveal var(--motion-dur) var(--motion-ease) both;
+    animation-delay: 240ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feature .feature-cell, .panels .panel, .stat-grid .stat, .cols .col,
+  .l-body .steps, .l-body .vs, .diagram-stage .proof-strip, .diagram-stage .tahta-figure {
+    animation: none;
+  }
+}
+
+.print .feature-cell, .print .panel, .print .stat, .print .col,
+.print .steps, .print .vs, .print .proof-strip, .print .tahta-figure,
+.slidev-print .feature-cell, .slidev-print .panel, .slidev-print .stat, .slidev-print .col,
+.slidev-print .steps, .slidev-print .vs, .slidev-print .proof-strip, .slidev-print .tahta-figure {
+  animation: none !important;
+}
