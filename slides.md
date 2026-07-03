@@ -164,8 +164,23 @@ features:
 layout: end
 title: See your own operating picture. Heads you win, tails you lose nothing.
 subtitle: We built this because we couldn't answer these questions about our own systems either. Send us one repo, we map it free and walk you through it on a 20-minute call. No commitment, and worst case you're out the 20 minutes. We're early, and picking a few founding customers this quarter, if you run more than a handful of services, this is for you.
-contact: iulia@knowledge-forge.com · vlad@knowledge-forge.com
 ---
+
+<div class="founders">
+  <span class="founder">
+    <a href="mailto:iulia@knowledge-forge.com">iulia@knowledge-forge.com</a>
+    <a class="li" href="https://www.linkedin.com/in/iulia-rinea-4820a520a/" target="_blank" rel="noopener" aria-label="Iulia on LinkedIn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+    </a>
+  </span>
+  <span class="sep" aria-hidden="true">·</span>
+  <span class="founder">
+    <a href="mailto:vlad@knowledge-forge.com">vlad@knowledge-forge.com</a>
+    <a class="li" href="https://www.linkedin.com/in/vlad-brincoveanu-97862b12b/" target="_blank" rel="noopener" aria-label="Vlad on LinkedIn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+    </a>
+  </span>
+</div>
 
 <div class="site-cta">
   <a href="https://www.knowledge-forge.com" target="_blank" rel="noopener">
@@ -185,6 +200,45 @@ contact: iulia@knowledge-forge.com · vlad@knowledge-forge.com
 </div>
 
 <style scoped>
+.founders {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 2rem;
+  font-family: var(--font-mono, 'Geist Mono', monospace);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.founders .founder {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.founders .founder > a:first-child {
+  color: var(--fg-dim, #9aa3b2);
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+.founders .founder > a:first-child:hover {
+  color: var(--accent);
+}
+.founders .li {
+  display: inline-flex;
+  align-items: center;
+  color: var(--fg-dim, #9aa3b2);
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+.founders .li:hover {
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+.founders .sep {
+  color: var(--fg-dim, #9aa3b2);
+  opacity: 0.5;
+}
 .site-cta {
   display: flex;
   justify-content: center;
@@ -217,4 +271,4 @@ contact: iulia@knowledge-forge.com · vlad@knowledge-forge.com
 }
 </style>
 
-<!-- PABRAI Dhandho: frame the buyer's decision as an asymmetric bet, tiny downside (one repo, minutes, free), big upside (a live map of the estate); they're confusing risk with uncertainty. CIALDINI reciprocity (free map) + commitment (one small repo) + scarcity (founding slots). The CTA is the COLD-APPROACH GOAL: earn the 20-minute call, not close the sale. Website surfaced as a clickable button now the deck is hosted/shareable; emails stay in the contact line. -->
+<!-- PABRAI Dhandho: frame the buyer's decision as an asymmetric bet, tiny downside (one repo, minutes, free), big upside (a live map of the estate); they're confusing risk with uncertainty. CIALDINI reciprocity (free map) + commitment (one small repo) + scarcity (founding slots). The CTA is the COLD-APPROACH GOAL: earn the 20-minute call, not close the sale. Website surfaced as a clickable button now the deck is hosted/shareable. Founder emails + LinkedIn (verifiable identity at the ask = Cialdini authority/liking) rendered in the slot instead of the plain-text contact field. -->
