@@ -164,7 +164,57 @@ features:
 layout: end
 title: See your own operating picture. Heads you win, tails you lose nothing.
 subtitle: We built this because we couldn't answer these questions about our own systems either. Send us one repo, we map it free and walk you through it on a 20-minute call. No commitment, and worst case you're out the 20 minutes. We're early, and picking a few founding customers this quarter, if you run more than a handful of services, this is for you.
-contact: knowledge-forge.com · iulia@knowledge-forge.com · vlad@knowledge-forge.com
+contact: iulia@knowledge-forge.com · vlad@knowledge-forge.com
 ---
 
-<!-- PABRAI Dhandho: frame the buyer's decision as an asymmetric bet, tiny downside (one repo, minutes, free), big upside (a live map of the estate); they're confusing risk with uncertainty. CIALDINI reciprocity (free map) + commitment (one small repo) + scarcity (founding slots). The CTA is the COLD-APPROACH GOAL: earn the 20-minute call, not close the sale. -->
+<div class="site-cta">
+  <a href="https://www.knowledge-forge.com" target="_blank" rel="noopener">
+    <svg width="13" height="13" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+      <polygon points="14,2 26,8 26,20 14,26 2,20 2,8" stroke="currentColor" stroke-width="1.5" fill="none" />
+      <circle cx="14" cy="14" r="2.5" fill="currentColor" />
+      <line x1="14" y1="2" x2="14" y2="11.5" stroke="currentColor" stroke-width="1" opacity="0.6" />
+      <line x1="14" y1="16.5" x2="14" y2="26" stroke="currentColor" stroke-width="1" opacity="0.6" />
+      <line x1="2" y1="8" x2="11.5" y2="12.5" stroke="currentColor" stroke-width="1" opacity="0.6" />
+      <line x1="16.5" y1="15.5" x2="26" y2="20" stroke="currentColor" stroke-width="1" opacity="0.6" />
+      <line x1="26" y1="8" x2="16.5" y2="12.5" stroke="currentColor" stroke-width="1" opacity="0.6" />
+      <line x1="11.5" y1="15.5" x2="2" y2="20" stroke="currentColor" stroke-width="1" opacity="0.6" />
+    </svg>
+    <span>www.knowledge-forge.com</span>
+    <span class="arrow" aria-hidden="true">&rarr;</span>
+  </a>
+</div>
+
+<style scoped>
+.site-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.4rem;
+}
+.site-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.1rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-family: var(--font-mono, 'Geist Mono', monospace);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+.site-cta a:hover {
+  background: var(--accent);
+  color: #0b0d12;
+}
+.site-cta .arrow {
+  transition: transform 0.18s ease;
+}
+.site-cta a:hover .arrow {
+  transform: translateX(3px);
+}
+</style>
+
+<!-- PABRAI Dhandho: frame the buyer's decision as an asymmetric bet, tiny downside (one repo, minutes, free), big upside (a live map of the estate); they're confusing risk with uncertainty. CIALDINI reciprocity (free map) + commitment (one small repo) + scarcity (founding slots). The CTA is the COLD-APPROACH GOAL: earn the 20-minute call, not close the sale. Website surfaced as a clickable button now the deck is hosted/shareable; emails stay in the contact line. -->
