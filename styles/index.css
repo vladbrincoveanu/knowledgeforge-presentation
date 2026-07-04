@@ -244,10 +244,10 @@
 }
 
 /* ── 8. VS LAYOUT — left bad / right good color cue ─────────────────────────── */
-.vs-left {
+.vs-side.a {
   border-left: 2px solid rgba(255, 107, 107, 0.30) !important;
 }
-.vs-right {
+.vs-side.b {
   border-left: 2px solid rgba(246, 174, 49, 0.35) !important;
 }
 
@@ -306,4 +306,19 @@
 .slidev-print .feature-cell, .slidev-print .panel, .slidev-print .stat, .slidev-print .col,
 .slidev-print .steps, .slidev-print .vs, .slidev-print .proof-strip, .slidev-print .tahta-figure {
   animation: none !important;
+}
+
+/* ── 11. COL CARD PADDING — col gets card borders but no theme padding ──────── */
+.col {
+  padding: 1.2rem 1.5rem !important;
+}
+.cols .col-rule {
+  display: none !important;
+}
+
+/* ── 12. AMBER CONSISTENCY — force all feature/panel/col cards to amber accent ─ */
+.feature-cell,
+.panel,
+.cols > * {
+  --card-accent: #F6AE31 !important;
 }
