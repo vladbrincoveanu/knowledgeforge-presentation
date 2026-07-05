@@ -41,7 +41,7 @@ columns:
 ---
 layout: stats
 kicker: The 2026 reality
-title: Three costs compounding. <span class="accent2">One lever that pays.</span>
+title: Three costs compounding. <span class="accent-green">One lever that pays.</span>
 stats:
   - { value: 30, unit: "%", label: "of new code is AI-written, and no one mapped it", icon: "lucide:bot", tone: bad }
   - { value: 3, unit: mo, label: "to onboard an engineer into an unmapped codebase", icon: "lucide:user-plus", tone: bad }
@@ -123,7 +123,7 @@ panels:
 ---
 layout: compare
 kicker: What it's worth to you
-title: The same work, <span class="accent2">a fraction of the time.</span>
+title: The same work, <span class="accent-green">a fraction of the time.</span>
 columns: [What you do today, Manual way, With KnowledgeForge, Δ]
 rows:
   - { metric: Audit & compliance prep, before: weeks, after: about a day, delta: "~10× faster" }
@@ -162,7 +162,7 @@ features:
 
 ---
 layout: end
-title: See your own operating picture. Heads you win, tails you lose nothing.
+title: See your own operating picture. <span class="accent-green">Heads you win,</span> tails you lose nothing.
 subtitle: We built this because we couldn't answer these questions about our own systems either. Send us one repo, we map it free and walk you through it on a 20-minute call. No commitment, and worst case you're out the 20 minutes. We're early, and picking a few founding customers this quarter, if you run more than a handful of services, this is for you.
 ---
 

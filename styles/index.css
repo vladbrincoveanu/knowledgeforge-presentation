@@ -328,6 +328,13 @@
   color: #34D399 !important;
 }
 
+/* ── 13b. GREEN TITLE ACCENTS — payoff phrases in headings read as wins ─────── */
+.slidev-layout h1 span.accent-green,
+.slidev-layout h2 span.accent-green {
+  color: #34D399 !important;
+  -webkit-text-fill-color: #34D399 !important;
+}
+
 /* ── 14. TITLE ↔ CONTENT SPACING — uniform gap on every topic slide ─────────── */
 .l-head {
   margin-bottom: var(--sp-6, 24px) !important;
