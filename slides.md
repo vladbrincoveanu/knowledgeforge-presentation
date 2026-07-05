@@ -66,7 +66,9 @@ title: We turn your repos into your <span class="accent2">operating picture.</sp
   <span><b>Ask any node</b> in plain language</span>
 </div>
 
-<Figure src="/graph-architecture.png" alt="KnowledgeForge architecture description" caption="The operating picture of your software, conforming to <a href='https://www.iso.org/standard/74393.html' target='_blank'>ISO/IEC/IEEE 42010</a>, the international standard. What took institutions years and eight figures now builds itself from your source, in minutes." />
+<Figure src="/graph-architecture.png" alt="KnowledgeForge architecture description" caption="The operating picture of your software. What took institutions years and eight figures now builds itself from your source, in minutes." />
+
+<div class="iso-footnote">Architecture description designed to align with <a href='https://www.iso.org/standard/74393.html' target='_blank'>ISO/IEC/IEEE 42010</a>, the international standard.</div>
 
 <!-- SOLUTION + PROOF MERGED (was two app slides; demo IS the proof, Munger fewer-bigger, show-don't-tell once and devastatingly). CIALDINI authority by demonstration + social proof + Pabrai clone-a-proven-frame. Full-width Figure, no crop, no text-over-image. ISO/IEC/IEEE 42010 per Iulia grounds the output in the international standard. BEFORE SENDING: make sure the screenshot IS a genuine cold run (or swap in the real Mastodon run + node/edge counts + wall-clock time) so every chip is literally true of the image shown. -->
 
@@ -153,17 +155,17 @@ layout: feature
 kicker: For the security review
 title: Enterprise-grade security, <span class="accent2">on your terms.</span>
 features:
-  - { icon: "lucide:badge-check", title: "ISO 27001 & SOC 2 Type II", desc: "independently audited, the certifications enterprise procurement asks for" }
+  - { icon: "lucide:badge-check", title: "Designed for ISO 27001 & SOC 2", desc: "controls built to the frameworks enterprise procurement asks for" }
   - { icon: "lucide:server", title: "Deploys in any infrastructure", desc: "managed, your own cloud, or fully on-premises" }
   - { icon: "lucide:lock", title: "GDPR-compliant, EU-hosted", desc: "hosted in the EU, your data stays yours" }
 ---
 
-<!-- ENTERPRISE TRUST, objection-handling right before the ask. Answers "can we trust them with our code?", the wall for both the repo offer and enterprise procurement (grill Q1a/Q2). Certs stated as fact per founder confirmation (real/live). Last beat before the CTA = "it's safe." -->
+<!-- ENTERPRISE TRUST, objection-handling right before the ask. Answers "can we trust them with our code?", the wall for both the repo offer and enterprise procurement (grill Q1a/Q2). "Designed for" NOT "certified": we do not hold the certificates yet, so the claim is control-alignment, defensible if they probe. If asked directly: controls are built to those frameworks, certification is on the roadmap. Last beat before the CTA = "it's safe." -->
 
 ---
 layout: end
 title: See your own operating picture. <span class="accent-green">Heads you win,</span> tails you lose nothing.
-subtitle: We built this because we couldn't answer these questions about our own systems either. Send us one repo, we map it free and walk you through it on a 20-minute call. No commitment, and worst case you're out the 20 minutes. We're early, and picking a few founding customers this quarter, if you run more than a handful of services, this is for you.
+subtitle: We built this because we couldn't answer these questions about our own systems either. Send us one repo, <span class="accent-green">we map it free</span> and walk you through it on a <span class="accent2">20-minute call</span>. No commitment, and worst case you're out the 20 minutes. We're early, and picking a few founding customers this quarter, if you run more than a handful of services, this is for you.
 ---
 
 <div class="founders">

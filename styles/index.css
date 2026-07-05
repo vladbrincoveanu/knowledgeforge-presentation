@@ -219,6 +219,25 @@
   margin: 0 auto;
 }
 
+/* ── 6b. ISO FOOTNOTE — muted standards reference at the bottom of the slide ── */
+.iso-footnote {
+  flex: 0 0 auto;
+  text-align: center;
+  font: 400 0.62rem/1.5 'Inter', system-ui, sans-serif;
+  color: #8A8680;
+  letter-spacing: 0.02em;
+  margin-top: 0.4rem;
+  opacity: 0.85;
+}
+.iso-footnote a {
+  color: #8A8680;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.iso-footnote a:hover {
+  color: #F6AE31;
+}
+
 /* ── 7. PROOF-STRIP CHIPS — amber-outlined, matching node label style on landing */
 .proof-strip {
   flex: 0 0 auto;
@@ -333,6 +352,19 @@
 .slidev-layout h2 span.accent-green {
   color: #6BD987 !important;
   -webkit-text-fill-color: #6BD987 !important;
+}
+
+/* ── 13c. LEAD ACCENTS — offer terms in subtitle copy: green = the win,
+   amber = the ask (matches the CTA button) ──────────────────────────────────── */
+.slidev-layout .fs-lead .accent-green {
+  color: #6BD987 !important;
+  -webkit-text-fill-color: #6BD987 !important;
+  font-weight: 600;
+}
+.slidev-layout .fs-lead .accent2 {
+  color: #F6AE31 !important;
+  -webkit-text-fill-color: #F6AE31 !important;
+  font-weight: 600;
 }
 
 /* ── 14. TITLE ↔ CONTENT SPACING — uniform gap on every topic slide ─────────── */
