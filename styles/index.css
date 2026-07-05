@@ -31,7 +31,7 @@
   --on-accent:   #0E121B;
 
   /* Status */
-  --good: #34D399;                     /* green — wins, "good" tones, deltas */
+  --good: #6BD987;                     /* green — oklch(0.80 0.154 150), same L/C as amber */
   --warn: #DB7706;                     /* darker amber for caution */
   --bad:  #ff6b6b;
   --info: #A3B3C2;                     /* steel blue-gray (secondary nodes) */
@@ -74,7 +74,7 @@
     ),
     radial-gradient(
       ellipse 40% 35% at 12% 10%,
-      rgba(52, 211, 153, 0.045) 0%,
+      rgba(107, 217, 135, 0.045) 0%,
       transparent 55%
     ),
     #0E121B;
@@ -180,7 +180,7 @@
 /* Good stats: green top border, matching --good */
 .stat[data-tone="good"],
 .stat.good {
-  border-top: 1px solid rgba(52, 211, 153, 0.45) !important;
+  border-top: 1px solid rgba(107, 217, 135, 0.45) !important;
 }
 
 /* ── 6. DIAGRAM HERO IMAGE (slide 4) ────────────────────────────────────────── */
@@ -248,7 +248,7 @@
   border-left: 2px solid rgba(255, 107, 107, 0.30) !important;
 }
 .vs-side.b {
-  border-left: 2px solid rgba(52, 211, 153, 0.45) !important;
+  border-left: 2px solid rgba(107, 217, 135, 0.45) !important;
 }
 
 /* ── 9. STEPS — amber left accent ───────────────────────────────────────────── */
@@ -325,14 +325,14 @@
 
 /* ── 13. GREEN WINS — delta column in compare tables reads as a win ─────────── */
 .slidev-layout td.accent2 {
-  color: #34D399 !important;
+  color: #6BD987 !important;
 }
 
 /* ── 13b. GREEN TITLE ACCENTS — payoff phrases in headings read as wins ─────── */
 .slidev-layout h1 span.accent-green,
 .slidev-layout h2 span.accent-green {
-  color: #34D399 !important;
-  -webkit-text-fill-color: #34D399 !important;
+  color: #6BD987 !important;
+  -webkit-text-fill-color: #6BD987 !important;
 }
 
 /* ── 14. TITLE ↔ CONTENT SPACING — uniform gap on every topic slide ─────────── */
