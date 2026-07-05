@@ -31,7 +31,7 @@
   --on-accent:   #0E121B;
 
   /* Status */
-  --good: #F6AE31;                     /* amber (landing "good" = gold) */
+  --good: #34D399;                     /* green — wins, "good" tones, deltas */
   --warn: #DB7706;                     /* darker amber for caution */
   --bad:  #ff6b6b;
   --info: #A3B3C2;                     /* steel blue-gray (secondary nodes) */
@@ -74,7 +74,7 @@
     ),
     radial-gradient(
       ellipse 40% 35% at 12% 10%,
-      rgba(246, 174, 49, 0.05) 0%,
+      rgba(52, 211, 153, 0.045) 0%,
       transparent 55%
     ),
     #0E121B;
@@ -177,10 +177,10 @@
   border-top: 1px solid rgba(255, 107, 107, 0.22) !important;
 }
 
-/* Good stats: stronger amber */
+/* Good stats: green top border, matching --good */
 .stat[data-tone="good"],
 .stat.good {
-  border-top: 1px solid rgba(246, 174, 49, 0.40) !important;
+  border-top: 1px solid rgba(52, 211, 153, 0.45) !important;
 }
 
 /* ── 6. DIAGRAM HERO IMAGE (slide 4) ────────────────────────────────────────── */
@@ -248,7 +248,7 @@
   border-left: 2px solid rgba(255, 107, 107, 0.30) !important;
 }
 .vs-side.b {
-  border-left: 2px solid rgba(246, 174, 49, 0.35) !important;
+  border-left: 2px solid rgba(52, 211, 153, 0.45) !important;
 }
 
 /* ── 9. STEPS — amber left accent ───────────────────────────────────────────── */
@@ -321,4 +321,17 @@
 .panel,
 .cols > * {
   --card-accent: #F6AE31 !important;
+}
+
+/* ── 13. GREEN WINS — delta column in compare tables reads as a win ─────────── */
+.slidev-layout td.accent2 {
+  color: #34D399 !important;
+}
+
+/* ── 14. TITLE ↔ CONTENT SPACING — uniform gap on every topic slide ─────────── */
+.l-head {
+  margin-bottom: var(--sp-6, 24px) !important;
+}
+.l-head .kicker {
+  margin-bottom: 0.65rem !important;
 }
